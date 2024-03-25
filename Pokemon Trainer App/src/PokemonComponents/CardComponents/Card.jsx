@@ -3,6 +3,11 @@ export default function Card() {
   let [pokemon, setPokemon] = useState('');
   useEffect(() => {}, []);
 
+  //Functions for handling events
+  let handleChange = (e) => {
+    setPokemon(e.target.value)
+  }
+
   return (
     <div>
       <h2>Blastoise</h2>
@@ -11,7 +16,7 @@ export default function Card() {
         alt='pokemon'
       />
       <div>
-        <input type='text' />
+        <input type='text' value={pokemon} onChange={handleChange} />
         <button>Search Pokedex</button>
       </div>
     </div>
