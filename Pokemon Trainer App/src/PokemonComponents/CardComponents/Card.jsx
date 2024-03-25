@@ -8,6 +8,11 @@ export default function Card() {
     setPokemon(e.target.value)
   }
 
+  let handleSearch = (e) => {
+    e.preventDefault();
+    console.log(pokemon)
+  }
+
   return (
     <div>
       <h2>Blastoise</h2>
@@ -17,7 +22,7 @@ export default function Card() {
       />
       <div>
         <input type='text' value={pokemon} onChange={handleChange} />
-        <button>Search Pokedex</button>
+        <button onClick={handleSearch}>Search Pokedex</button>
       </div>
     </div>
   );
