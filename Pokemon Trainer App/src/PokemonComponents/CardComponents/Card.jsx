@@ -1,5 +1,6 @@
-
+import { useState } from "react"
 export default function Card(){
+    let [pokemon, setPokemon] = useState('');
 
     return(
         <div>
