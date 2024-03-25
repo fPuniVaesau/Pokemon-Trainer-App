@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './App.css';
+import Card from './PokemonComponents/CardComponents/Card';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1>Pokemon</h1>
+      <Card />
     </>
   );
 }
