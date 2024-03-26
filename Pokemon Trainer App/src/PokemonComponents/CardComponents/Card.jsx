@@ -31,7 +31,7 @@ export default function Card({
   return (
     <div>
       <h2>Pokemon</h2>
-      <Form setPokemon={setPokemon} />
+      <Form setPokemon={setPokemon} pokemon={pokemon} />
       <div>
         {pokemonData.map((pokemonChoice) => (
           <>
