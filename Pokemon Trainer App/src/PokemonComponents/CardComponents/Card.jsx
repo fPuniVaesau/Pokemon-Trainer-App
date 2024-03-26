@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 export default function Card({pokemon, setPokemon}) {
+   const baseURL = "https://pokeapi.co/api/v2/pokemon/"
   
-  useEffect(() => {}, []);
+  useEffect(() => {
+
+  }, []);
 
   //Functions for handling events
   let handleChange = (e) => {
@@ -16,7 +19,7 @@ export default function Card({pokemon, setPokemon}) {
 
   return (
     <div>
-      <h2>Blastoise</h2>
+      <h2>demo</h2>
       <img
         src='https://i.pinimg.com/originals/d3/6e/6f/d36e6f74d9ade37082eb7234cb6dcc22.png'
         alt='pokemon'
