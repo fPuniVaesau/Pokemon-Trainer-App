@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
-export default function Card({ pokemon, setPokemon, pokemonData, setPokemonData }) {
+export default function Card({
+  pokemon,
+  setPokemon,
+  pokemonData,
+  setPokemonData,
+}) {
   let baseURL = 'https://pokeapi.co/api/v2/pokemon/';
 
   useEffect(() => {
@@ -12,7 +17,8 @@ export default function Card({ pokemon, setPokemon, pokemonData, setPokemonData 
           throw new Error('Pokemon Data Not Found!');
         }
         let data = await response.json();
-        console.log(data);
+        let pokemonImg = data.sprites.front_default;
+        setPokemon({ ...pokemon, image: pokemonImg });
       } catch (error) {
         console.log(error);
       }
@@ -27,7 +33,8 @@ export default function Card({ pokemon, setPokemon, pokemonData, setPokemonData 
 
   let handleSearch = (e) => {
     e.preventDefault();
-    setPokemon('');
+    console.log(pokemon);
+    setPokemonData([...pokemonData, pokemon]);
   };
 
   return (
@@ -37,7 +44,6 @@ export default function Card({ pokemon, setPokemon, pokemonData, setPokemonData 
         <input type='text' value={pokemon.name} onChange={handleChange} />
         <button>Search Pokedex</button>
       </form>
-      {pokemon.name}
     </div>
   );
 }
