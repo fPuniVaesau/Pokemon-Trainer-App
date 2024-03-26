@@ -7,4 +7,5 @@
 body {
   min-height: 100dvh;
   padding: 0 1.5rem;
+  background-color: hsl(210, 13%, 50%);
 }
