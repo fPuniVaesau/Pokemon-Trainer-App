@@ -1,4 +1,4 @@
-export default function Form({setPokemon, pokemon}) {
+export default function Form({ setPokemon, pokemon }) {
   //Functions for handling events
   let handleChange = (e) => {
     setPokemon(e.target.value);

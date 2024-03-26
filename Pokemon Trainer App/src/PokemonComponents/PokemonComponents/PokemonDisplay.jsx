@@ -1,13 +1,12 @@
-
-export default function PokemonDisplay(){
-    return(
+export default function PokemonDisplay({ pokemonData, setPokemonData }) {
+  return (
+    <div>
+      {pokemonData.map((pokemonChoice) => (
         <div>
-        {pokemonData.map((pokemonChoice) => (
-          <>
-            <p>{pokemonChoice.name}</p>
-            <img src={pokemonChoice.sprites.front_default} alt='' />
-          </>
-        ))}
-      </div>
-    )
+          <p>{pokemonChoice.name}</p>
+          <img src={pokemonChoice.sprites.front_default} alt='' />
+        </div>
+      ))}
+    </div>
+  );
 }

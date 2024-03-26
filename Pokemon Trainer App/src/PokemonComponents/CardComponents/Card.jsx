@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Form from '../FormComponents/Form';
+import PokemonDisplay from '../PokemonComponents/PokemonDisplay';
 export default function Card({
   pokemon,
   setPokemon,
@@ -32,7 +33,7 @@ export default function Card({
     <div>
       <h2>Pokemon</h2>
       <Form setPokemon={setPokemon} pokemon={pokemon} />
-      
+      <PokemonDisplay pokemonData={pokemonData} />
     </div>
   );
 }
