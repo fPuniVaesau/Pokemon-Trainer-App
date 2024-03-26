@@ -22,7 +22,7 @@ export default function Card({
         console.log(error);
       }
     }
-  }, [pokemon]);
+  }, [pokemon.name, pokemon.image]);
 
   //Functions for handling events
   let handleChange = (e) => {
