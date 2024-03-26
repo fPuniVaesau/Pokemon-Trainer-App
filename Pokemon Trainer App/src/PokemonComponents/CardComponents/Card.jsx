@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-export default function Card({ pokemon, setPokemon }) {
+export default function Card({ pokemon, setPokemon, pokemonData, setPokemonData }) {
   let baseURL = 'https://pokeapi.co/api/v2/pokemon/';
 
   useEffect(() => {
