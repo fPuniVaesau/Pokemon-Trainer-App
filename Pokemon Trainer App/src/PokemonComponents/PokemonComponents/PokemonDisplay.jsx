@@ -1,5 +1,5 @@
 
-export default PokemonDisplay(){
+export default function PokemonDisplay(){
     return(
         <div>
         {pokemonData.map((pokemonChoice) => (
