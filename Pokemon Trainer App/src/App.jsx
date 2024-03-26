@@ -3,11 +3,11 @@ import './App.css';
 import Card from './PokemonComponents/CardComponents/Card';
 
 function App() {
-  const [count, setCount] = useState(0);
+  let [pokemon, setPokemon] = useState('');
 
   return (
     <>
-      <Card />
+      <Card pokemon={pokemon} setPokemon={setPokemon} />
     </>
   );
 }

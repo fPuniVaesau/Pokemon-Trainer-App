@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-export default function Card() {
-  let [pokemon, setPokemon] = useState('');
+export default function Card({pokemon, setPokemon}) {
+  
   useEffect(() => {}, []);
 
   //Functions for handling events
@@ -11,6 +11,7 @@ export default function Card() {
   let handleSearch = (e) => {
     e.preventDefault();
     console.log(pokemon)
+    setPokemon('')
   }
 
   return (
@@ -22,7 +23,7 @@ export default function Card() {
       />
       <div>
         <input type='text' value={pokemon} onChange={handleChange} />
-        <button onClick={handleSearch}>Search Pokedex</button>
+        <button onClick={(()=>{handleSearch})}>Search Pokedex</button>
       </div>
     </div>
   );
