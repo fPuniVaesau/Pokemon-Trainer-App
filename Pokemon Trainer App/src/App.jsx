@@ -3,11 +3,17 @@ import './App.css';
 import Card from './PokemonComponents/CardComponents/Card';
 
 function App() {
-  let [pokemon, setPokemon] = useState({name: "", image: ""});
+  let [pokemon, setPokemon] = useState({ name: '', image: '' });
+  let [pokemonData, setPokemonData] = useState([]);
 
   return (
     <>
-      <Card pokemon={pokemon} setPokemon={setPokemon} />
+      <Card
+        pokemon={pokemon}
+        setPokemon={setPokemon}
+        pokemonData={pokemonData}
+        setPokemonData={setPokemonData}
+      />
     </>
   );
 }

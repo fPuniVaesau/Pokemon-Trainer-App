@@ -22,6 +22,7 @@ export default function Card({pokemon, setPokemon}) {
   //Functions for handling events
   let handleChange = (e) => {
     setPokemon({...pokemon, name:e.target.value})
+    console.log(pokemon.name)
   }
 
   let handleSearch = (e) => {
@@ -36,7 +37,7 @@ export default function Card({pokemon, setPokemon}) {
         <input type='text' value={pokemon.name} onChange={handleChange} />
         <button>Search Pokedex</button>
       </form>
-      
+        {pokemon.name}
     </div>
   );
 }
