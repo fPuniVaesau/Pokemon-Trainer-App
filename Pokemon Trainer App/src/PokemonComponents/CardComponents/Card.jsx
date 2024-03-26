@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Form from '../FormComponents/Form';
 import PokemonDisplay from '../PokemonComponents/PokemonDisplay';
+import styles from "./Card.module.css"
 export default function Card({
   pokemon,
   setPokemon,
@@ -30,7 +31,7 @@ export default function Card({
   }, [pokemon]);
 
   return (
-    <div>
+    <div className={}>
       <h2>Pokemon</h2>
       <Form setPokemon={setPokemon} pokemon={pokemon} />
       <PokemonDisplay pokemonData={pokemonData} />
