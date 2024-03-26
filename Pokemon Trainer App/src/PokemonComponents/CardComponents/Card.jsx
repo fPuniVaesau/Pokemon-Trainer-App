@@ -5,7 +5,7 @@ export default function Card({pokemon, setPokemon}) {
   useEffect(() => {
     async function fetchPokemonData(){
         try{
-            
+            let response 
         }
         catch(error){
             console.log(error)
