@@ -31,7 +31,7 @@ export default function Card({
   }, [pokemon]);
 
   return (
-    <div className={}>
+    <div className={styles.test}>
       <h2>Pokemon</h2>
       <Form setPokemon={setPokemon} pokemon={pokemon} />
       <PokemonDisplay pokemonData={pokemonData} />
