@@ -1,40 +1,42 @@
 import { useState, useEffect } from 'react';
 export default function Card({pokemon, setPokemon}) {
-   const baseURL = "https://pokeapi.co/api/v2/pokemon/"
+   let baseURL = "https://pokeapi.co/api/v2/pokemon/"
   
   useEffect(() => {
+    fetchPokemonData();
+    
     async function fetchPokemonData(){
-        try{
-            let response 
-        }
-        catch(error){
+        try {
+            let response = await fetch(`${baseURL}${pokemon.name}`)
+            if (!response.ok){
+                throw new Error("Pokemon Data Not Found!");
+            }
+            let data = await response.json();
+            console.log(data)
+        } catch (error) {
             console.log(error)
         }
     }
-  }, []);
+  }, [pokemon]);
 
   //Functions for handling events
   let handleChange = (e) => {
-    setPokemon(e.target.value)
+    setPokemon({...pokemon, name:e.target.value})
   }
 
   let handleSearch = (e) => {
     e.preventDefault();
-    console.log(pokemon)
     setPokemon('')
   }
 
   return (
     <div>
       <h2>demo</h2>
-      <img
-        src='https://i.pinimg.com/originals/d3/6e/6f/d36e6f74d9ade37082eb7234cb6dcc22.png'
-        alt='pokemon'
-      />
-      <div>
-        <input type='text' value={pokemon} onChange={handleChange} />
-        <button onClick={(()=>{handleSearch})}>Search Pokedex</button>
-      </div>
+      <form onSubmit={handleSearch}>
+        <input type='text' value={pokemon.name} onChange={handleChange} />
+        <button>Search Pokedex</button>
+      </form>
+      
     </div>
   );
 }
