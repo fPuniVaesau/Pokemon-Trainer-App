@@ -3,7 +3,14 @@ export default function Card({pokemon, setPokemon}) {
    const baseURL = "https://pokeapi.co/api/v2/pokemon/"
   
   useEffect(() => {
-
+    async function fetchPokemonData(){
+        try{
+            
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
   }, []);
 
   //Functions for handling events
