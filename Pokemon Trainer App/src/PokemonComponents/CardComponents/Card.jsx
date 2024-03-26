@@ -42,7 +42,7 @@ export default function Card({
 
   return (
     <div>
-      <h2>demo</h2>
+      <h2>Pokemon</h2>
       <form onSubmit={handleSearch}>
         <input type='text' value={pokemon} onChange={handleChange} />
         <button>Search Pokedex</button>
