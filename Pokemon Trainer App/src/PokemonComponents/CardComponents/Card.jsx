@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Form from '../FormComponents/Form';
 export default function Card({
   pokemon,
   setPokemon,
@@ -27,26 +28,10 @@ export default function Card({
     }
   }, [pokemon]);
 
-  console.log();
-
-  //Functions for handling events
-  let handleChange = (e) => {
-    setPokemon(e.target.value);
-    console.log(pokemon);
-  };
-
-  let handleSearch = (e) => {
-    e.preventDefault();
-    setPokemon('');
-  };
-
   return (
     <div>
       <h2>Pokemon</h2>
-      <form onSubmit={handleSearch}>
-        <input type='text' value={pokemon} onChange={handleChange} />
-        <button>Search Pokedex</button>
-      </form>
+      <Form setPokemon={setPokemon} />
       <div>
         {pokemonData.map((pokemonChoice) => (
           <>
