@@ -12,36 +12,39 @@ export default function Card({
 
     async function fetchPokemonData() {
       try {
-        let response = await fetch(`${baseURL}${pokemon.name}`);
+        let response = await fetch(`${baseURL}${pokemon}`);
         if (!response.ok) {
           throw new Error('Pokemon Data Not Found!');
         }
         let data = await response.json();
-        console.log(data);
+        console.log(data)
       } catch (error) {
         console.log(error);
       }
     }
-  }, [pokemon.name, pokemon.image]);
+  }, [pokemon]);
 
   //Functions for handling events
   let handleChange = (e) => {
-    setPokemon({ ...pokemon, name: e.target.value });
-    console.log(pokemon.name);
+    setPokemon(e.target.value);
+    console.log(pokemon);
   };
 
   let handleSearch = (e) => {
     e.preventDefault();
-    console.log(pokemon.name);
+    console.log(pokemonData);
   };
 
   return (
     <div>
       <h2>demo</h2>
       <form onSubmit={handleSearch}>
-        <input type='text' value={pokemon.name} onChange={handleChange} />
+        <input type='text' value={pokemon} onChange={handleChange} />
         <button>Search Pokedex</button>
       </form>
+      {pokemonData.map(pokemonChoice => (
+        <img src={pokemonChoice} alt="" />
+      ))}
     </div>
   );
 }
