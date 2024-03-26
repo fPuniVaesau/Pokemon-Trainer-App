@@ -17,8 +17,7 @@ export default function Card({
           throw new Error('Pokemon Data Not Found!');
         }
         let data = await response.json();
-        let pokemonImg = data.sprites.front_default;
-        setPokemon({ ...pokemon, image: pokemonImg });
+        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -33,8 +32,7 @@ export default function Card({
 
   let handleSearch = (e) => {
     e.preventDefault();
-    console.log(pokemon);
-    setPokemonData([...pokemonData, pokemon]);
+    console.log(pokemon.name);
   };
 
   return (
