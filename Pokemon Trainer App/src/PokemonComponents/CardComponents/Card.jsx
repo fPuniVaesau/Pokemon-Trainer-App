@@ -17,13 +17,15 @@ export default function Card({
           throw new Error('Pokemon Data Not Found!');
         }
         let data = await response.json();
-        setPokemonData([...pokemonData, data.sprites.front_default])
-
+        console.log(data)
+        setPokemonData([...pokemon, data]);
       } catch (error) {
         console.log(error);
       }
     }
   }, [pokemon]);
+
+  console.log();
 
   //Functions for handling events
   let handleChange = (e) => {
@@ -33,7 +35,6 @@ export default function Card({
 
   let handleSearch = (e) => {
     e.preventDefault();
-    console.log(pokemonData);
   };
 
   return (
@@ -44,8 +45,8 @@ export default function Card({
         <button>Search Pokedex</button>
       </form>
       <div>
-        {pokemonData.map(pokemonChoice => (
-            <img src={pokemonChoice} alt="pokemon image" />
+        {pokemonData.map((pokemonChoice) => (
+            <li>{pokemonChoice.name}</li>
         ))}
       </div>
     </div>
