@@ -32,14 +32,7 @@ export default function Card({
     <div>
       <h2>Pokemon</h2>
       <Form setPokemon={setPokemon} pokemon={pokemon} />
-      <div>
-        {pokemonData.map((pokemonChoice) => (
-          <>
-            <p>{pokemonChoice.name}</p>
-            <img src={pokemonChoice.sprites.front_default} alt='' />
-          </>
-        ))}
-      </div>
+      
     </div>
   );
 }
