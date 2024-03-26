@@ -1,7 +1,7 @@
 
-export default function PokemonInfo(){
+export default function PokemonInfo({name, image}){
 
     return(
-        
+
     )
 }
