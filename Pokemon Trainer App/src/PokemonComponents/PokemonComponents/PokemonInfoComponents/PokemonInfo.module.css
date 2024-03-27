@@ -7,3 +7,7 @@
   max-width: 7rem;
   object-fit: cover;
 }
+
+.container{
+  border: 1px solid whitesmoke;
+}
