@@ -7,14 +7,14 @@ function App() {
   let [pokemonData, setPokemonData] = useState([]);
 
   return (
-    <div>
+    <>
       <Card
         pokemon={pokemon}
         setPokemon={setPokemon}
         pokemonData={pokemonData}
         setPokemonData={setPokemonData}
       />
-    </div>
+    </>
   );
 }
 
