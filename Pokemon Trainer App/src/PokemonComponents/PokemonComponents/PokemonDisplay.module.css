@@ -1,4 +1,6 @@
 .container {
   /* background-color: hsla(0, 0%, 41%, 0.764); */
   margin-top: 10px;
+  display: flex;
+  gap: 1em;
 }
