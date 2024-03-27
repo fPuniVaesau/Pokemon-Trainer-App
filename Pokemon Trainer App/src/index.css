@@ -5,7 +5,15 @@
 }
 
 body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   min-height: 100dvh;
   padding: 0 1.5rem;
   background-color: hsl(210, 13%, 50%);
+}
+
+img,
+svg,
+video{
+  display: block;
+  width: 100%;
 }
