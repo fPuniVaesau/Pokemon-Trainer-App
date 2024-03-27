@@ -1,6 +1,4 @@
 .container {
   background-color: hsla(0, 0%, 41%, 0.764);
-  min-height: 15em;
-  min-width: 15em;
-  display: inline-block;
+  margin-top: 10px;
 }
