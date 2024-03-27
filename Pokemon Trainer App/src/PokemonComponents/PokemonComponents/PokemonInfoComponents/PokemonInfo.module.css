@@ -1,13 +1,24 @@
 .name {
   text-transform: uppercase;
+  text-align: center;
+  border: 1px solid whitesmoke;
+  margin: 1em 3em;
 }
 
 .pokemonImg {
-  max-height: 7rem;
-  max-width: 7rem;
+  max-height: 10rem;
+  max-width: 10rem;
   object-fit: cover;
+  margin: auto;
+  border: 1px solid whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.container{
+.container {
   border: 1px solid whitesmoke;
+  height: 20em;
+  /* margin: auto; */
+  width: 15em;
+  border-radius: 10px;
 }
