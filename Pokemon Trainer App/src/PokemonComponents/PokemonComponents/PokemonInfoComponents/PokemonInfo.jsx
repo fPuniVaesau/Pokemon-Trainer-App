@@ -7,7 +7,7 @@ export default function PokemonInfo({ name, image, type, weight }) {
       <img className={styles.pokemonImg} src={image} alt='pokemon image' />
       <div className={styles.statsContainer}>
         <p>Type: {type}</p>
-        <p>Weight: {weight}</p>
+        <p>Weight: {weight}lbs</p>
       </div>
     </div>
   );

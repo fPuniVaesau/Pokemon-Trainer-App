@@ -1,7 +1,8 @@
 export default function Form({ setPokemon, pokemon }) {
   //Functions for handling events
   let handleChange = (e) => {
-    setPokemon(e.target.value);
+    let target = e.target.value
+    setPokemon(target);
   };
 
   let handleSearch = (e) => {
