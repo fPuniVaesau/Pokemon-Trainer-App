@@ -23,7 +23,7 @@ export default function Card({
         }
         let data = await response.json();
         console.log(data);
-        if (pokemon !== '') {
+        if (pokemon !== '' && pokemon !== ' ') {
           setPokemonData([...pokemonData, data]);
           setPokemon('')
         }
