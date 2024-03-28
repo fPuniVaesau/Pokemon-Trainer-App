@@ -3,7 +3,6 @@ import Form from '../FormComponents/Form';
 import PokemonDisplay from '../PokemonComponents/PokemonDisplay';
 import styles from './Card.module.css';
 
-
 export default function Card({
   pokemon,
   setPokemon,
@@ -25,7 +24,7 @@ export default function Card({
         console.log(data);
         if (pokemon !== '' && pokemon !== ' ') {
           setPokemonData([...pokemonData, data]);
-          setPokemon('')
+          setPokemon('');
         }
       } catch (error) {
         console.log(error);
