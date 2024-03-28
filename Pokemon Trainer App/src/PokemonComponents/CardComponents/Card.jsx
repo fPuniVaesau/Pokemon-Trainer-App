@@ -24,6 +24,7 @@ export default function Card({
         console.log(data);
         if (pokemon !== '') {
           setPokemonData([...pokemonData, data]);
+          setPokemon('')
         }
       } catch (error) {
         console.log(error);
