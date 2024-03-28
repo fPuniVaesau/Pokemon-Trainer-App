@@ -3,6 +3,7 @@ import Form from '../FormComponents/Form';
 import PokemonDisplay from '../PokemonComponents/PokemonDisplay';
 import styles from './Card.module.css';
 
+
 export default function Card({
   pokemon,
   setPokemon,
