@@ -1,7 +1,7 @@
 .name {
   text-transform: uppercase;
   text-align: center;
-  border: 1px solid rgba(245, 245, 245, 0.561);
+  border: 3px double rgba(245, 245, 245, 0.561);
   margin: 1em 3em;
 }
 
@@ -10,7 +10,7 @@
   max-width: 10rem;
   object-fit: cover;
   margin: auto;
-  border: 1px solid rgba(245, 245, 245, 0.561);
+  border: 3px double rgba(245, 245, 245, 0.561);
   padding: 10px;
   border-radius: 5px;
 }
