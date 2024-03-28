@@ -7,7 +7,7 @@
 }
 
 h3 {
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 1.25px;
 }
 
@@ -16,7 +16,7 @@ h3 {
   max-width: 10rem;
   object-fit: cover;
   margin: auto;
-  
+  border: 3px double rgba(245, 245, 245, 0.561);
   padding: 10px;
   border-radius: 5px;
 }
