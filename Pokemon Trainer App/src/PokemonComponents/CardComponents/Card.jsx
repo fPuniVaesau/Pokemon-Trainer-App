@@ -16,7 +16,7 @@ export default function Card({
 
     async function fetchPokemonData() {
       try {
-        let response = await fetch(`${baseURL}${pokemon}`);
+        let response = await fetch(`${baseURL}${pokemon.toLowerCase()}`);
         if (!response.ok) {
           throw new Error('Pokemon Data Not Found!');
         }

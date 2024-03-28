@@ -10,6 +10,7 @@ export default function PokemonDisplay({ pokemonData, setPokemonData }) {
           image={pokemonChoice.sprites.front_default}
           type={pokemonChoice.types[0].type.name}
           weight={pokemonChoice.weight}
+          pokemonId={pokemonChoice.id}
           key={pokemonChoice.name}
         />
       ))}
