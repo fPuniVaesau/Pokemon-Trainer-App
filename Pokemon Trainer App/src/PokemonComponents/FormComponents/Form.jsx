@@ -1,3 +1,5 @@
+
+
 export default function Form({ setPokemon, pokemon }) {
   //Functions for handling events
   let handleChange = (e) => {
