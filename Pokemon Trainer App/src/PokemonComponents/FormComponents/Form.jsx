@@ -1,4 +1,4 @@
-
+import styles from "./Form.module.css";
 
 export default function Form({ setPokemon, pokemon }) {
   //Functions for handling events
